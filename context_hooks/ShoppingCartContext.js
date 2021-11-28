@@ -47,5 +47,5 @@ export default function useShoppingCart() {
         setCartItems,
         /* operations */
         addToShoppingCart
-    }), [cartItems]);
+    }), [cartItems, totalPrice]);
 }
