@@ -27,11 +27,25 @@ export default function useShoppingCart() {
         if (items) setCartItems(JSON.parse(items));
     }, []);
 
+    /* Returns a boolean if item is already in the cart */
+    function addToShoppingCart({ id, name, desc, price, quantity }) {
+        const isInTheCart = cartItems.some(item => item.id === id);
+        if (isInTheCart) return true;
+
+        setCartItems(prevItems => [...prevItems, {
+            id: id, name: name, desc: desc, price: price, quantity: quantity
+        }]);
+
+        return false;
+    }
+
     return useMemo(() => ({
         ShoppingCartContext,
         totalPrice,
         setTotalPrice,
         cartItems,
-        setCartItems
+        setCartItems,
+        /* operations */
+        addToShoppingCart
     }), [cartItems]);
 }
