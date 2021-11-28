@@ -13,7 +13,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../context_hooks/ThemeContext';
 import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link';
-import { styled } from '@mui/material/styles';
+import { styled, experimental_sx as sx } from '@mui/material/styles';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 
 export default function Navbar() {
@@ -21,18 +21,25 @@ export default function Navbar() {
     const { theme, setTheme } = useContext(ThemeContext);
     const { cartItems } = useContext(ShoppingCartContext);
 
-    const StyledBadge = styled(Badge)(({ theme }) => ({
+    const StyledBadge = styled(Badge)(() => ({
         '& .MuiBadge-badge': {
             right: 2,
             top: 8,
         },
     }));
 
+    const StyledIconButton = styled(IconButton)(() => (
+        sx({
+            backdropFilter: 'invert(7%)',
+            borderRadius: '.5rem',
+        })
+    ));
+
     return <>
         <AppBar position="fixed" color='transparent' sx={{ boxShadow: 'none' }}>
             <Toolbar>
                 <Link href='/' passHref>
-                    <Box display='flex' alignItems='center' sx={{ cursor: 'pointer' }}>
+                    <Box display='flex' alignItems='center' sx={{ cursor: 'default' }}>
                         <Avatar src='/favicon.png' alt='mascota de cafe logo' />
                         <Typography variant="h6" component="h1" ml={1}> Mascota de Cafe </Typography>
                     </Box>
@@ -43,34 +50,25 @@ export default function Navbar() {
                 <Link href='/cart' passHref>
                     <Tooltip title='View Cart'>
                         <StyledBadge badgeContent={cartItems.length} color="primary">
-                            <IconButton sx={{
-                                backdropFilter: 'invert(7%)',
-                                borderRadius: '.5rem',
-                            }} aria-label="dark theme">
+                            <StyledIconButton aria-label="dark theme">
                                 <ShoppingCartOutlinedIcon />
-                            </IconButton>
+                            </StyledIconButton>
                         </StyledBadge>
                     </Tooltip>
                 </Link>
 
+                <Box p={1}></Box>
+
                 {theme === 'light'
                     ? <Tooltip title='Switch to Dark Mode'>
-                        <IconButton sx={{
-                            backdropFilter: 'invert(7%)',
-                            borderRadius: '.5rem',
-                            marginLeft: '1rem'
-                        }} aria-label="dark theme" onClick={() => setTheme('dark')}>
+                        <StyledIconButton aria-label="dark theme" onClick={() => setTheme('dark')}>
                             <DarkModeOutlinedIcon />
-                        </IconButton>
+                        </StyledIconButton>
                     </Tooltip>
                     : <Tooltip title='Switch to Light Mode'>
-                        <IconButton sx={{
-                            backdropFilter: 'invert(7%)',
-                            borderRadius: '.5rem',
-                            marginLeft: '1rem'
-                        }} aria-label="light theme" onClick={() => setTheme('light')}>
+                        <StyledIconButton aria-label="light theme" onClick={() => setTheme('light')}>
                             <LightModeOutlinedIcon />
-                        </IconButton>
+                        </StyledIconButton>
                     </Tooltip>
                 }
             </Toolbar>
