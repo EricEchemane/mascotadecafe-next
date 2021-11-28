@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     ShoppingCartContext,
     cartItems,
     totalPrice,
+    setCartItems,
     addToShoppingCart } = useShoppingCart();
 
   const MascotaTheme = createTheme({
@@ -40,7 +41,12 @@ function MyApp({ Component, pageProps }) {
     </Head>
 
     <ThemeProvider theme={MascotaTheme}>
-      <ShoppingCartContext.Provider value={{ cartItems, totalPrice, addToShoppingCart }}>
+
+      <ShoppingCartContext.Provider value={{
+        cartItems, totalPrice,
+        setCartItems, addToShoppingCart
+      }}>
+
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <CssBaseline />
           <Component {...pageProps} />
