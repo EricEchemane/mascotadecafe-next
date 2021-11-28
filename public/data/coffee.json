@@ -1,0 +1,122 @@
+[
+    {
+        "id": "cp-1",
+        "name": "Ohana Capuchino",
+        "desc": "Prepared with steamed milk foam",
+        "rating": 7899,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-2",
+        "name": "Cappuccino",
+        "desc": "Single espresso shot and hot milk topped with foamed milk.",
+        "rating": 7519,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-3",
+        "name": "Barako",
+        "desc": "Satisfying aroma, sweetness and a hint of lower bitter taste.",
+        "rating": 7341,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-4",
+        "name": "Macchiato",
+        "desc": "Espresso coffee drink with foamy milk",
+        "rating": 7323,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-5",
+        "name": "Chocopino",
+        "desc": "Espresso coffee drink with milk and chocolate",
+        "rating": 6323,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-6",
+        "name": "Espresso",
+        "desc": "A kiss of foamy crema and a lingering after taste.",
+        "rating": 7213,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-7",
+        "name": "Ice Americano",
+        "desc": "Espresso shots topped with ice produce a light layer of crema.",
+        "rating": 7690,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-8",
+        "name": "Cold Brew Coffee",
+        "desc": "Rich in flavor and less bitter.",
+        "rating": 6490,
+        "price": [
+            80,
+            100
+        ]
+    },
+    {
+        "id": "cp-9",
+        "name": "Ice Latte",
+        "desc": "Topped with ice and whipped cream.",
+        "rating": 11710,
+        "price": [
+            90,
+            110
+        ]
+    },
+    {
+        "id": "cp-10",
+        "name": "Ice Mocha",
+        "desc": "Topped with bittersweet mocha sauce, milk and ice.",
+        "rating": 7637,
+        "price": [
+            100,
+            120
+        ]
+    },
+    {
+        "id": "cp-11",
+        "name": "Caffe Mocha",
+        "desc": "In the form of cocoa powder and sugar.",
+        "rating": 7542,
+        "price": [
+            120,
+            140
+        ]
+    },
+    {
+        "id": "cp-12",
+        "name": "Caramel Macchiato",
+        "desc": "Made with vanilla syrup, steamed milk and espresso",
+        "rating": 8247,
+        "price": [
+            130,
+            150
+        ]
+    }
+]
