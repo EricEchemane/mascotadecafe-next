@@ -1,0 +1,135 @@
+[
+    {
+        "id": "pastry1",
+        "name": "Chocolate Fudge Waffle.",
+        "desc": "Chocolate Waffle and topped with ice cream and fudge chocolate sauce",
+        "rating": 7899,
+        "price": 120
+    },
+    {
+        "id": "pastry2",
+        "name": "Choco Wafer Bars",
+        "desc": "Contain layering that include nuts, fruits, caramel, nougat, and wafers.",
+        "rating": 7341,
+        "price": 80
+    },
+    {
+        "id": "pastry3",
+        "name": "Classic Croissant",
+        "desc": "Buttery, crescent-shaped French pastry.",
+        "rating": 7635,
+        "price": 85
+    },
+    {
+        "id": "pastry4",
+        "name": "Macaroons",
+        "desc": "Butter-creamed filled cookie sandwich.",
+        "rating": 7535,
+        "price": 75
+    },
+    {
+        "id": "pastry5",
+        "name": "Chocolate Chip Cookies",
+        "desc": "Soft and chewy cookie top with chocolate chips.",
+        "rating": 7562,
+        "price": 65
+    },
+    {
+        "id": "pastry6",
+        "name": "Chocolate Brownies",
+        "desc": "A rectangular piece of cake and has a fudge texture.",
+        "rating": 7733,
+        "price": 50
+    },
+    {
+        "id": "pastry7",
+        "name": "Blueberry Cheese Cake",
+        "desc": "A buttery graham cracker crust, a creamy cheesecake center, and a tangy blueberry swirl.",
+        "rating": 7123,
+        "price": 160
+    },
+    {
+        "id": "pastry8",
+        "name": "Strawberry Cheese Cake",
+        "desc": "A creamy cheesecake on a graham cracker crust topped with fresh strawberry sauce.",
+        "rating": 7443,
+        "price": 160
+    },
+    {
+        "id": "pastry9",
+        "name": "Cinnamon Rolls",
+        "desc": "moist, doughy and topped with thick buttercream icing and a sprinkle of chopped pecans.",
+        "rating": 7987,
+        "price": 75
+    },
+    {
+        "id": "pastry10",
+        "name": "French Toast",
+        "desc": "A dish made of sliced bread soaked in beaten eggs and typically milk, then pan fried.",
+        "rating": 7514,
+        "price": 60
+    },
+    {
+        "id": "pastry11",
+        "name": "White Chocolate and Cranberry Cookie",
+        "desc": "Easy soft and chewy oatmeal cookies packed with white chocolate chips and dried cranberries.",
+        "rating": 7251,
+        "price": 130
+    },
+    {
+        "id": "pastry12",
+        "name": "S'mores Bars",
+        "desc": "A graham cracker cookie crust layered with chocolate bars and marshmallow crème topped with graham cracker crust.",
+        "rating": 7113,
+        "price": 50
+    },
+    {
+        "id": "pastry13",
+        "name": "Banana Loaf",
+        "desc": "Made from pure mashed Banana",
+        "rating": 7172,
+        "price": 50
+    },
+    {
+        "id": "pastry14",
+        "name": "Ube Cheesecake",
+        "desc": "A Filipino bread rolls, soft, fluffy and loaded with purple yam flavor.",
+        "rating": 7883,
+        "price": 120
+    },
+    {
+        "id": "pastry15",
+        "name": "Original Glaze Doughnuts",
+        "desc": "It is a light and chewy and good way to get anyone's attention.",
+        "rating": 7192,
+        "price": 65
+    },
+    {
+        "id": "pastry16",
+        "name": "Chocolate Doughnuts",
+        "desc": "Cover in a thick chocolate glazed.",
+        "rating": 7031,
+        "price": 75
+    },
+    {
+        "id": "pastry17",
+        "name": "Pancake",
+        "desc": "A best partner with any drinks and taste like flapjacks.",
+        "rating": 7921,
+        "price": 90
+    },
+    {
+        "id": "pastry18",
+        "name": "Matcha Doughnuts",
+        "desc": "Baked Doughnuts and decorated with matcha green tea on top.",
+        "rating": 7009,
+        "price": 80
+    },
+    {
+        "id": "pastry19",
+        "name": "Strawberry Doughnuts",
+        "desc": "Baked Doughnuts and decorated with matcha green tea on top.",
+        "rating": 8079,
+        "price": 80
+    }
+]
