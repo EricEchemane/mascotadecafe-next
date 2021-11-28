@@ -3,7 +3,7 @@ import { createContext, useEffect, useMemo, useState } from "react";
 export const ShoppingCartContext = createContext();
 
 function persistCartItemsToStorage(cartItems) {
-    localStorage.setItem('mascota-shopping-cart', cartItems);
+    localStorage.setItem('mascota-shopping-cart', JSON.stringify(cartItems));
 }
 
 function getTotalPrice(cartItems) {
@@ -21,11 +21,6 @@ export default function useShoppingCart() {
         persistCartItemsToStorage(cartItems);
         setTotalPrice(getTotalPrice(cartItems));
     }, [cartItems]);
-
-    useEffect(() => {
-        const items = localStorage.getItem('mascota-shopping-cart');
-        if (items) setCartItems(JSON.parse(items));
-    }, []);
 
     /* Returns a boolean if item is already in the cart */
     function addToShoppingCart({ id, name, desc, price, quantity }) {
