@@ -10,7 +10,11 @@ import useShoppingCart from '../context_hooks/ShoppingCartContext';
 function MyApp({ Component, pageProps }) {
 
   const { theme, setTheme, ThemeContext } = useThemeContext();
-  const { ShoppingCartContext, cartItems, totalPrice } = useShoppingCart();
+  const {
+    ShoppingCartContext,
+    cartItems,
+    totalPrice,
+    addToShoppingCart } = useShoppingCart();
 
   const MascotaTheme = createTheme({
     typography: {
@@ -36,7 +40,7 @@ function MyApp({ Component, pageProps }) {
     </Head>
 
     <ThemeProvider theme={MascotaTheme}>
-      <ShoppingCartContext.Provider value={{ cartItems, totalPrice }}>
+      <ShoppingCartContext.Provider value={{ cartItems, totalPrice, addToShoppingCart }}>
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <CssBaseline />
           <Component {...pageProps} />
