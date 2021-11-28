@@ -5,18 +5,26 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useContext } from 'react';
 import { ThemeContext } from '../context_hooks/ThemeContext';
 import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link';
+import { styled } from '@mui/material/styles';
 
 export default function Navbar() {
 
     const { theme, setTheme } = useContext(ThemeContext);
+
+    const StyledBadge = styled(Badge)(({ theme }) => ({
+        '& .MuiBadge-badge': {
+            right: 2,
+            top: 8,
+        },
+    }));
 
     return <>
         <AppBar position="fixed" color='transparent' sx={{ boxShadow: 'none' }}>
@@ -28,14 +36,14 @@ export default function Navbar() {
 
                 <Link href='/cart' passHref>
                     <Tooltip title='View Cart'>
-                        <Badge badgeContent={4} color="secondary">
+                        <StyledBadge badgeContent={4} color="primary">
                             <IconButton sx={{
                                 backdropFilter: 'invert(7%)',
-                                borderRadius: '.3rem',
+                                borderRadius: '.5rem',
                             }} aria-label="dark theme">
                                 <ShoppingCartOutlinedIcon />
                             </IconButton>
-                        </Badge>
+                        </StyledBadge>
                     </Tooltip>
                 </Link>
 
@@ -43,19 +51,19 @@ export default function Navbar() {
                     ? <Tooltip title='Switch to Dark Mode'>
                         <IconButton sx={{
                             backdropFilter: 'invert(7%)',
-                            borderRadius: '.3rem',
+                            borderRadius: '.5rem',
                             marginLeft: '1rem'
                         }} aria-label="dark theme" onClick={() => setTheme('dark')}>
-                            <DarkModeIcon />
+                            <DarkModeOutlinedIcon />
                         </IconButton>
                     </Tooltip>
                     : <Tooltip title='Switch to Light Mode'>
                         <IconButton sx={{
                             backdropFilter: 'invert(7%)',
-                            borderRadius: '.3rem',
+                            borderRadius: '.5rem',
                             marginLeft: '1rem'
                         }} aria-label="light theme" onClick={() => setTheme('light')}>
-                            <LightModeIcon />
+                            <LightModeOutlinedIcon />
                         </IconButton>
                     </Tooltip>
                 }
