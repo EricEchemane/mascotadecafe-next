@@ -49,11 +49,11 @@ export default function Navbar() {
 
                 <Link href='/cart' passHref>
                     <Tooltip title='View Cart'>
-                        <StyledBadge badgeContent={cartItems.length} color="primary">
+                        <> <StyledBadge badgeContent={cartItems.length} color="primary">
                             <StyledIconButton aria-label="dark theme">
                                 <ShoppingCartOutlinedIcon />
                             </StyledIconButton>
-                        </StyledBadge>
+                        </StyledBadge> </>
                     </Tooltip>
                 </Link>
 
@@ -61,14 +61,14 @@ export default function Navbar() {
 
                 {theme === 'light'
                     ? <Tooltip title='Switch to Dark Mode'>
-                        <StyledIconButton aria-label="dark theme" onClick={() => setTheme('dark')}>
+                        <> <StyledIconButton aria-label="dark theme" onClick={() => setTheme('dark')}>
                             <DarkModeOutlinedIcon />
-                        </StyledIconButton>
+                        </StyledIconButton> </>
                     </Tooltip>
                     : <Tooltip title='Switch to Light Mode'>
-                        <StyledIconButton aria-label="light theme" onClick={() => setTheme('light')}>
+                        <><StyledIconButton aria-label="light theme" onClick={() => setTheme('light')}>
                             <LightModeOutlinedIcon />
-                        </StyledIconButton>
+                        </StyledIconButton> </>
                     </Tooltip>
                 }
             </Toolbar>
