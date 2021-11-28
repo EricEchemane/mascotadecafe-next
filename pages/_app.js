@@ -5,10 +5,12 @@ import Head from 'next/head';
 import useThemeContext from '../context_hooks/ThemeContext';
 import { orange, red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
+import useShoppingCart from '../context_hooks/ShoppingCartContext';
 
 function MyApp({ Component, pageProps }) {
 
   const { theme, setTheme, ThemeContext } = useThemeContext();
+  const { ShoppingCartContext, cartItems, totalPrice } = useShoppingCart();
 
   const MascotaTheme = createTheme({
     typography: {
@@ -34,10 +36,12 @@ function MyApp({ Component, pageProps }) {
     </Head>
 
     <ThemeProvider theme={MascotaTheme}>
-      <ThemeContext.Provider value={{ theme, setTheme }}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeContext.Provider>
+      <ShoppingCartContext.Provider value={{ cartItems, totalPrice }}>
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeContext.Provider>
+      </ShoppingCartContext.Provider>
     </ThemeProvider>
   </>;
 }
