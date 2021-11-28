@@ -32,7 +32,7 @@ export default function Home({ coffees }) {
           <Typography
             className='md-center'
             variant={belowSmallDevices ? 'h4' : 'h3'}>
-            Let's share
+            Let&apos;s share
           </Typography>
           <Typography
             className='md-center'
