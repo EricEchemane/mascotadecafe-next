@@ -16,7 +16,8 @@ function MyApp({ Component, pageProps }) {
     totalPrice,
     setCartItems,
     addToShoppingCart,
-    removeFromShoppingCart } = useShoppingCart();
+    removeFromShoppingCart,
+    changeCartItemQuantity } = useShoppingCart();
 
   const MascotaTheme = createTheme({
     typography: {
@@ -45,7 +46,8 @@ function MyApp({ Component, pageProps }) {
 
       <ShoppingCartContext.Provider value={{
         cartItems, totalPrice,
-        setCartItems, addToShoppingCart, removeFromShoppingCart
+        setCartItems, addToShoppingCart,
+        removeFromShoppingCart, changeCartItemQuantity
       }}>
 
         <ThemeContext.Provider value={{ theme, setTheme }}>
