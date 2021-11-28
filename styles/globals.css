@@ -46,3 +46,8 @@ body {
 .open-menu {
   transform: scale(1) !important;
 }
+
+.cont {
+  max-width: 1080px;
+  margin: 0 auto;
+}

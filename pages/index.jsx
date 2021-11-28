@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Navbar from '../comps/Navbar';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import isDevMode from '../lib/node_env';
 
@@ -11,13 +11,10 @@ export default function Home({ coffees, pastries }) {
   const {
     cartItems,
     totalPrice,
+    setCartItems,
     addToShoppingCart,
-    setCartItems } = useContext(ShoppingCartContext);
-
-  useEffect(() => {
-    const hasItems = localStorage.getItem('mascota-shopping-cart');
-    if (hasItems) setCartItems(JSON.parse(hasItems));
-  }, []);
+    removeFromShoppingCart,
+    changeCartItemQuantity } = useContext(ShoppingCartContext);
 
   return <>
     <Navbar />
