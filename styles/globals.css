@@ -14,3 +14,34 @@ body {
 .darken-bg {
   backdrop-filter: invert(5%);
 }
+
+#mob-theme-btns, #mob-menu-btn {
+  display: none;
+}
+@media screen and (max-width: 680px) {
+  #mob-theme-btns, #mob-menu-btn {
+    display: inline;
+  }
+  #theme-btn {
+    display: none;
+  }
+  #nav-links {
+    position: absolute;
+    z-index: 2;
+    right: .25rem;
+    top: 4rem;
+    flex-direction: column;
+    backdrop-filter: blur(50px);
+    align-items: flex-start;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    width: auto;
+    min-width: 170px;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: 200ms ease;
+  }
+}
+
+.open-menu {
+  transform: scale(1) !important;
+}

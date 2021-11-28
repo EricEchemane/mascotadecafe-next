@@ -9,17 +9,45 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { ThemeContext } from '../context_hooks/ThemeContext';
-import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link';
 import { styled, experimental_sx as sx } from '@mui/material/styles';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
+import MenuOpenOutlinedIcon from '@mui/icons-material/MenuOpenOutlined';
 
 export default function Navbar() {
 
     const { theme, setTheme } = useContext(ThemeContext);
     const { cartItems } = useContext(ShoppingCartContext);
+
+    const navLinks = useRef();
+    const mobMenuBtn = useRef();
+    const menuIsShown = useRef(false);
+
+    useEffect(() => {
+        window.addEventListener('click', clickHandler);
+        navLinks.current = document.getElementById('nav-links');
+        mobMenuBtn.current = document.getElementById('mob-menu-btn');
+        return () => window.removeEventListener('click', clickHandler);
+    }, []);
+
+    function scrollListener() {
+        navLinks.current.classList.remove('open-menu');
+        menuIsShown.current = false;
+    }
+
+    function clickHandler(e) {
+        if (mobMenuBtn.current.contains(e.target)) {
+            if (!menuIsShown.current) navLinks.current.classList.add('open-menu');
+            else navLinks.current.classList.remove('open-menu');
+            menuIsShown.current = !menuIsShown.current;
+        }
+        else {
+            navLinks.current.classList.remove('open-menu');
+            menuIsShown.current = false;
+        }
+    }
 
     const StyledBadge = styled(Badge)(() => ({
         '& .MuiBadge-badge': {
@@ -47,30 +75,61 @@ export default function Navbar() {
 
                 <Box sx={{ flexGrow: 1 }}></Box>
 
+                <Box p={1} display='flex' gap='1rem' mr={2} id='nav-links'>
+
+                    <Link href='/about'>
+                        <Button sx={{ color: 'text.primary' }}> About </Button>
+                    </Link>
+                    <Link href='/pets'>
+                        <Button sx={{ color: 'text.primary' }}> Pets </Button>
+                    </Link>
+                    <Link href='/contact'>
+                        <Button sx={{ color: 'text.primary' }}> Contact </Button>
+                    </Link>
+
+                    <span id="mob-theme-btns">
+                        {theme === 'light'
+                            ? <Box onClick={() => setTheme('dark')}>
+                                <StyledIconButton aria-label="dark theme">
+                                    <DarkModeOutlinedIcon />
+                                </StyledIconButton>
+                                Dark Mode
+                            </Box>
+                            : <Box onClick={() => setTheme('light')}>
+                                <StyledIconButton aria-label="light theme">
+                                    <LightModeOutlinedIcon />
+                                </StyledIconButton> Light Mode
+                            </Box>
+                        }
+                    </span>
+                </Box>
+
                 <Link href='/cart'>
-                    <Tooltip title='View Cart'>
-                        <StyledBadge badgeContent={cartItems.length} color="primary">
-                            <StyledIconButton aria-label="dark theme">
-                                <ShoppingCartOutlinedIcon />
-                            </StyledIconButton>
-                        </StyledBadge>
-                    </Tooltip>
+                    <StyledBadge badgeContent={cartItems.length} color="primary">
+                        <StyledIconButton aria-label="dark theme">
+                            <ShoppingCartOutlinedIcon />
+                        </StyledIconButton>
+                    </StyledBadge>
                 </Link>
 
-                <Box p={1}></Box>
+                <Box mx={1}></Box>
 
-                {theme === 'light'
-                    ? <Tooltip title='Switch to Dark Mode'>
-                        <StyledIconButton aria-label="dark theme" onClick={() => setTheme('dark')}>
+                <span id='theme-btn'>
+                    {theme === 'light'
+                        ? <StyledIconButton aria-label="dark theme" onClick={() => setTheme('dark')}>
                             <DarkModeOutlinedIcon />
                         </StyledIconButton>
-                    </Tooltip>
-                    : <Tooltip title='Switch to Light Mode'>
-                        <StyledIconButton aria-label="light theme" onClick={() => setTheme('light')}>
+                        : <StyledIconButton aria-label="light theme" onClick={() => setTheme('light')}>
                             <LightModeOutlinedIcon />
                         </StyledIconButton>
-                    </Tooltip>
-                }
+                    }
+                </span>
+
+                <Box id="mob-menu-btn">
+                    <StyledIconButton aria-label="open menu">
+                        <MenuOpenOutlinedIcon />
+                    </StyledIconButton>
+                </Box>
             </Toolbar>
         </AppBar>
     </>;
