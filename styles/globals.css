@@ -36,6 +36,7 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, .2);
     width: auto;
     min-width: 170px;
+    will-change: scale, transform;
     transform-origin: top right;
     transform: scale(0);
     transition: 200ms ease;
