@@ -4,11 +4,19 @@ import Typography from '@mui/material/Typography';
 import { useContext } from 'react';
 import Navbar from '../comps/Navbar';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
+import RemoveShoppingCartOutlinedIcon from '@mui/icons-material/RemoveShoppingCartOutlined';
 import Link from 'next/link';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+
 
 export default function Cart() {
 
-    const { cartItems, totalPrice, changeCartItemQuantity } = useContext(ShoppingCartContext);
+    const {
+        cartItems,
+        totalPrice,
+        changeCartItemQuantity,
+        removeFromShoppingCart } = useContext(ShoppingCartContext);
 
     return <>
         <Navbar />
@@ -35,6 +43,11 @@ export default function Cart() {
                                     {quantity}
                                     <Button onClick={() => changeCartItemQuantity(id, 1)}> + </Button>
                                 </Typography>
+                                <Tooltip title="Remove from cart">
+                                    <IconButton onClick={() => removeFromShoppingCart(id)}>
+                                        <RemoveShoppingCartOutlinedIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </Box>
                         ))}
             </Box>
