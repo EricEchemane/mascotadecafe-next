@@ -27,25 +27,31 @@ export default function useShoppingCart() {
         setTotalPrice(getTotalPrice(cartItems));
     }, [cartItems]);
 
-    /* Returns a boolean if item is already in the cart */
+    function isInTheCart(id) {
+        return cartItems.some(item => item.id === id);
+    }
+
     function addToShoppingCart({ id, name, desc, price, quantity }) {
         const isInTheCart = cartItems.some(item => item.id === id);
-        if (isInTheCart) return true;
+        if (isInTheCart) return;
 
         setCartItems(prevItems => [...prevItems, {
             id: id, name: name, desc: desc, price: price, quantity: quantity
         }]);
+    }
 
-        return false;
+    function removeFromShoppingCart(id) {
+        setCartItems(prevItems => prevItems.filter(item => item.id != id));
     }
 
     return useMemo(() => ({
         ShoppingCartContext,
         totalPrice,
-        setTotalPrice,
         cartItems,
+        setTotalPrice,
         setCartItems,
         /* operations */
-        addToShoppingCart
+        addToShoppingCart,
+        removeFromShoppingCart
     }), [cartItems, totalPrice]);
 }
