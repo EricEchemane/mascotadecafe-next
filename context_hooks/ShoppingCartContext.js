@@ -18,6 +18,11 @@ export default function useShoppingCart() {
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
+        const hasItems = localStorage.getItem('mascota-shopping-cart');
+        if (hasItems) setCartItems(JSON.parse(hasItems));
+    }, []);
+
+    useEffect(() => {
         persistCartItemsToStorage(cartItems);
         setTotalPrice(getTotalPrice(cartItems));
     }, [cartItems]);
