@@ -27,7 +27,7 @@ body {
   }
   #nav-links {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     right: .25rem;
     top: 4rem;
     flex-direction: column;
@@ -50,4 +50,18 @@ body {
 .cont {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+#nav {
+  will-change: transform, translate;
+  margin: 0 calc((100vw - 1080px) / 2);
+  z-index: 2;
+  transition: 250ms ease;
+}
+
+.hide-nav {
+  transform: translateY(-100%) !important;
+}
+body {
+  height: 200vh;
 }

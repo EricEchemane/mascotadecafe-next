@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import isDevMode from '../lib/node_env';
 
-export default function Home({ coffees, pastries }) {
+export default function Home({ coffees }) {
 
   const {
     cartItems,
@@ -24,12 +24,9 @@ export default function Home({ coffees, pastries }) {
 export async function getStaticProps(context) {
   const origin = isDevMode() ? 'http://localhost:3000' : 'https://mascotadecafe.vercel.app';
   const coffeeRes = await fetch(`${origin}/data/coffee.json`);
-  const pastriesRes = await fetch(`${origin}/data/pastries.json`);
-
   return {
     props: {
       coffees: await coffeeRes.json(),
-      pastries: await pastriesRes.json(),
     }
   };
 }
