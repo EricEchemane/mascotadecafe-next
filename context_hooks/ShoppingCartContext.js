@@ -44,6 +44,22 @@ export default function useShoppingCart() {
         setCartItems(prevItems => prevItems.filter(item => item.id != id));
     }
 
+    /**
+     * @param quantityChange 1 means increase by 1, -1 means decrease by 1
+     */
+    function changeCartItemQuantity(id, quantityChange) {
+        setCartItems(prevItems => {
+            const copy = [...prevItems];
+            copy.forEach(item => {
+                if (item.id === id) {
+                    if (quantityChange === -1 && item.quantity === 1) return;
+                    item.quantity += quantityChange;
+                }
+            });
+            return copy;
+        });
+    }
+
     return useMemo(() => ({
         ShoppingCartContext,
         totalPrice,
@@ -52,6 +68,7 @@ export default function useShoppingCart() {
         setCartItems,
         /* operations */
         addToShoppingCart,
-        removeFromShoppingCart
+        removeFromShoppingCart,
+        changeCartItemQuantity
     }), [cartItems, totalPrice]);
 }
