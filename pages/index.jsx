@@ -51,6 +51,7 @@ export default function Home({ coffees }) {
         <Grid item xs={12} md={7}>
           <Image
             src='/assets/stories/s4.jpg'
+            alt="Table with coffee and pastries"
             width={100}
             height={60}
             layout="responsive"
