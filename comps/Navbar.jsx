@@ -23,32 +23,17 @@ export default function Navbar() {
 
     const navLinks = useRef();
     const mobMenuBtn = useRef();
-    const nav = useRef();
 
     const menuIsShown = useRef(false);
-    const pageScroll = useRef(0);
 
     useEffect(() => {
         window.addEventListener('click', clickHandler);
-        window.addEventListener('scroll', scrollHandler);
 
         navLinks.current = document.getElementById('nav-links');
         mobMenuBtn.current = document.getElementById('mob-menu-btn');
-        nav.current = document.getElementById('nav');
 
-        return () => {
-            window.removeEventListener('click', clickHandler);
-            window.removeEventListener('click', scrollHandler);
-        };
+        return () => window.removeEventListener('click', clickHandler);
     }, []);
-
-    function scrollHandler() {
-        const yOffset = window.scrollY;
-        yOffset > pageScroll.current
-            ? nav.current.classList.add('hide-nav')
-            : nav.current.classList.remove('hide-nav');
-        pageScroll.current = yOffset;
-    }
 
     function clickHandler(e) {
         if (mobMenuBtn.current.contains(e.target)) {
@@ -77,7 +62,7 @@ export default function Navbar() {
     ));
 
     return <>
-        <AppBar position="fixed" id='nav' color='transparent' sx={{ boxShadow: 'none' }} className='cont'>
+        <AppBar position="static" id='nav' color='transparent' sx={{ boxShadow: 'none' }}>
             <Toolbar>
                 <Link href='/' passHref>
                     <Box display='flex' alignItems='center' sx={{ cursor: 'default' }}>
