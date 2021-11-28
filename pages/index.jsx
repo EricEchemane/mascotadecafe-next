@@ -25,7 +25,7 @@ export default function Home({ coffees, pastries }) {
 }
 
 export async function getStaticProps(context) {
-  const origin = isDevMode() ? 'http://localhost:3000' : '';
+  const origin = isDevMode() ? 'http://localhost:3000' : 'https://mascotadecafe.vercel.app';
   const coffeeRes = await fetch(`${origin}/data/coffee.json`);
   const pastriesRes = await fetch(`${origin}/data/pastries.json`);
 
