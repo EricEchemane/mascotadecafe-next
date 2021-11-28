@@ -14,10 +14,12 @@ import { ThemeContext } from '../context_hooks/ThemeContext';
 import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link';
 import { styled } from '@mui/material/styles';
+import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 
 export default function Navbar() {
 
     const { theme, setTheme } = useContext(ThemeContext);
+    const { cartItems } = useContext(ShoppingCartContext);
 
     const StyledBadge = styled(Badge)(({ theme }) => ({
         '& .MuiBadge-badge': {
@@ -36,7 +38,7 @@ export default function Navbar() {
 
                 <Link href='/cart' passHref>
                     <Tooltip title='View Cart'>
-                        <StyledBadge badgeContent={4} color="primary">
+                        <StyledBadge badgeContent={cartItems.length} color="primary">
                             <IconButton sx={{
                                 backdropFilter: 'invert(7%)',
                                 borderRadius: '.5rem',
