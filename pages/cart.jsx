@@ -1,14 +1,14 @@
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import Navbar from '../comps/Navbar';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import Link from 'next/link';
 
 export default function Cart() {
 
-    const { cartItems, totalPrice } = useContext(ShoppingCartContext);
+    const { cartItems, totalPrice, changeCartItemQuantity } = useContext(ShoppingCartContext);
 
     return <>
         <Navbar />
@@ -30,7 +30,10 @@ export default function Cart() {
                                 <Typography variant='h5'> {name} </Typography>
                                 <Typography variant='subtitle2'> Price: {price} </Typography>
                                 <Typography variant='body1'>
-                                    Quantity: <Button> - </Button> {quantity} <Button> + </Button>
+                                    Quantity:
+                                    <Button disabled={quantity === 1} onClick={() => changeCartItemQuantity(id, -1)}> - </Button>
+                                    {quantity}
+                                    <Button onClick={() => changeCartItemQuantity(id, 1)}> + </Button>
                                 </Typography>
                             </Box>
                         ))}
