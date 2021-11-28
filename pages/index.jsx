@@ -42,7 +42,7 @@ export default function Home({ coffees }) {
             Experiences <br /> Together
           </Typography>
           <Box className='md-center' marginBottom="1rem">
-            Photo on the {MD ? 'below' : 'right'}: <br />
+            Photo {MD ? 'below' : 'on the right'}: <br />
             Scene from Filinvest City Branch <br />
             March 29, 2021 | Sunday | 2:00 PM
           </Box>
