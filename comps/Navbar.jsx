@@ -87,21 +87,21 @@ export default function Navbar() {
                         <Button sx={{ color: 'text.primary' }}> Contact </Button>
                     </Link>
 
-                    <span id="mob-theme-btns">
+                    <Box id="mob-theme-btns" sx={{ cursor: 'pointer' }}>
                         {theme === 'light'
                             ? <Box onClick={() => setTheme('dark')}>
-                                <StyledIconButton aria-label="dark theme">
+                                <IconButton aria-label="dark theme">
                                     <DarkModeOutlinedIcon />
-                                </StyledIconButton>
+                                </IconButton>
                                 Dark Mode
                             </Box>
                             : <Box onClick={() => setTheme('light')}>
-                                <StyledIconButton aria-label="light theme">
+                                <IconButton aria-label="light theme">
                                     <LightModeOutlinedIcon />
-                                </StyledIconButton> Light Mode
+                                </IconButton> Light Mode
                             </Box>
                         }
-                    </span>
+                    </Box>
                 </Box>
 
                 <Link href='/cart'>
