@@ -20,9 +20,10 @@ import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 export default function PastryProductCard({ id, name, desc, price, rating }) {
 
     const { isInTheCart, addToShoppingCart } = useContext(ShoppingCartContext);
+    const imgSrc = `/assets/pastry/${id}.jpg`;
 
     function addToCart() {
-        addToShoppingCart({ id: id, name: name, desc: desc, price: price, quantity: 1 });
+        addToShoppingCart({ id: id, name: name, desc: desc, price: price, quantity: 1, imgSrc: imgSrc });
     }
 
     return <>
@@ -31,7 +32,7 @@ export default function PastryProductCard({ id, name, desc, price, rating }) {
 
                 <Image
                     alt={name}
-                    src={`/assets/pastry/${id}.jpg`}
+                    src={imgSrc}
                     width={100}
                     height={100}
                     priority={true}

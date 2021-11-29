@@ -25,18 +25,19 @@ export default function useShoppingCart() {
     useEffect(() => {
         persistCartItemsToStorage(cartItems);
         setTotalPrice(getTotalPrice(cartItems));
+        console.log(cartItems);
     }, [cartItems]);
 
     function isInTheCart(id) {
         return cartItems.some(item => item.id === id);
     }
 
-    function addToShoppingCart({ id, name, desc, price, quantity }) {
+    function addToShoppingCart({ id, name, desc, price, quantity, imgSrc }) {
         const isInTheCart = cartItems.some(item => item.id === id);
         if (isInTheCart) return;
 
         setCartItems(prevItems => [...prevItems, {
-            id: id, name: name, desc: desc, price: price, quantity: quantity
+            id: id, name: name, desc: desc, price: price, quantity: quantity, imgSrc: imgSrc
         }]);
     }
 

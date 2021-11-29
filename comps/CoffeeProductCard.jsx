@@ -20,9 +20,10 @@ import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 export default function CoffeeProductCard({ id, name, desc, price, rating }) {
 
     const { isInTheCart, addToShoppingCart } = useContext(ShoppingCartContext);
+    const imgSrc = `/assets/coffeeProducts/${id}.png`;
 
     function addToCart() {
-        addToShoppingCart({ id: id, name: name, desc: desc, price: price[0], quantity: 1 });
+        addToShoppingCart({ id: id, name: name, desc: desc, price: price[0], quantity: 1, imgSrc: imgSrc });
     }
 
     return <>
@@ -31,7 +32,7 @@ export default function CoffeeProductCard({ id, name, desc, price, rating }) {
 
                 <Image
                     alt={name}
-                    src={`/assets/coffeeProducts/${id}.png`}
+                    src={imgSrc}
                     width={100}
                     height={80}
                     priority={true}
