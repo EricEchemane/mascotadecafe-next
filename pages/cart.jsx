@@ -7,7 +7,6 @@ import Navbar from '../comps/Navbar';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import RemoveShoppingCartOutlinedIcon from '@mui/icons-material/RemoveShoppingCartOutlined';
 import Link from 'next/link';
-import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Avatar from '@mui/material/Avatar';

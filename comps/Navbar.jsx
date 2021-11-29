@@ -12,6 +12,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useContext, useEffect, useRef } from 'react';
 import { ThemeContext } from '../context_hooks/ThemeContext';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { styled, experimental_sx as sx } from '@mui/material/styles';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import MenuOpenOutlinedIcon from '@mui/icons-material/MenuOpenOutlined';
@@ -25,6 +26,8 @@ export default function Navbar() {
     const mobMenuBtn = useRef();
 
     const menuIsShown = useRef(false);
+
+    const router = useRouter();
 
     useEffect(() => {
         window.addEventListener('click', clickHandler);
@@ -104,7 +107,7 @@ export default function Navbar() {
 
                 <Link href='/cart'>
                     <StyledBadge badgeContent={cartItems.length} color="secondary">
-                        <StyledIconButton aria-label="dark theme">
+                        <StyledIconButton aria-label="dark theme" color={router.pathname == '/cart' ? 'primary' : 'default'}>
                             <ShoppingCartOutlinedIcon />
                         </StyledIconButton>
                     </StyledBadge>
