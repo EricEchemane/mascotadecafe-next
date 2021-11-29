@@ -26,7 +26,7 @@ export default function CoffeeProductCard({ id, name, desc, price, rating }) {
     }
 
     return <>
-        <Grid item xs={6} md={4} lg={3} sx={{ overflow: 'visible' }}>
+        <Grid item xs={6} md={4} lg={3}>
             <div className='coffee-product-card'>
 
                 <Image

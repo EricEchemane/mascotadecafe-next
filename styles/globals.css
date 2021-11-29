@@ -12,6 +12,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .darken-bg {
   backdrop-filter: invert(5%);
 }
