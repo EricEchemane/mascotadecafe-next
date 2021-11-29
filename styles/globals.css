@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat';
+  scroll-behavior: smooth;
 }
 
 * {
@@ -75,6 +76,14 @@ body {
   }
 }
 
-body {
-  height: 200vh;
+.coffee-product-card{
+  will-change: transform;
+  transition: 200ms ease;
+  backdrop-filter: invert(5%);
+}
+.coffee-product-card:hover{
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .5);
+  backdrop-filter: none;
 }

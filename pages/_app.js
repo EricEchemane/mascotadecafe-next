@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     ShoppingCartContext,
     cartItems,
     totalPrice,
+    isInTheCart,
     setCartItems,
     addToShoppingCart,
     removeFromShoppingCart,
@@ -54,7 +55,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={MascotaTheme}>
 
       <ShoppingCartContext.Provider value={{
-        cartItems, totalPrice,
+        cartItems, totalPrice, isInTheCart,
         setCartItems, addToShoppingCart,
         removeFromShoppingCart, changeCartItemQuantity
       }}>

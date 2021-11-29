@@ -69,6 +69,7 @@ export default function useShoppingCart() {
         /* operations */
         addToShoppingCart,
         removeFromShoppingCart,
-        changeCartItemQuantity
+        changeCartItemQuantity,
+        isInTheCart
     }), [cartItems, totalPrice]);
 }

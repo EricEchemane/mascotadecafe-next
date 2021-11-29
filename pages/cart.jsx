@@ -20,13 +20,13 @@ export default function Cart() {
 
     return <>
         <Navbar />
-        <Box p={2} mt={8}>
-            <Typography variant='h4'> Cart Items </Typography>
+        <Box p='1.5rem' mt={8} className='cont'>
+            <Typography variant='h5'> Cart Items </Typography>
             <Box mt={2}>
                 {
                     cartItems.length == 0
                         ? <Box>
-                            <Typography variant='h5'> Your Cart is empty </Typography>
+                            <Typography variant='h6'> Your Cart is empty </Typography>
                             <br />
                             <Link href='/' passHref>
                                 <Button variant='contained'> Shop Now </Button>
@@ -35,7 +35,7 @@ export default function Cart() {
 
                         : cartItems.map(({ id, name, desc, price, quantity }) => (
                             <Box key={id}>
-                                <Typography variant='h5'> {name} </Typography>
+                                <Typography variant='h6'> {name} </Typography>
                                 <Typography variant='subtitle2'> Price: {price} </Typography>
                                 <Typography variant='body1'>
                                     Quantity:
@@ -52,7 +52,7 @@ export default function Cart() {
                         ))}
             </Box>
         </Box>
-        <Box p={2}>
+        <Box p='1.5rem' className='cont'>
             <Typography variant='h4'> Total Price: {totalPrice} </Typography>
         </Box>
     </>;

@@ -78,7 +78,9 @@ export default function Home({ coffees }) {
         </Link>
       </ButtonGroup>
 
-      <Grid container mt="1.5rem">
+      <Box m={4}></Box>
+
+      <Grid container spacing={MD ? 2 : 7}>
         {coffees.map(coffee => <CoffeeProductCard {...coffee} key={coffee.id} />)}
       </Grid>
     </Box>
