@@ -97,3 +97,13 @@ a {
     backdrop-filter: none;
   }
 }
+
+#about-page-video {
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 24px 24px -8px rgba(107, 71, 12, 0.5);
+}
+
+#landing-div {
+  background: linear-gradient(120deg, transparent, #fff3e0);
+}
