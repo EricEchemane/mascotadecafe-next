@@ -80,7 +80,7 @@ export default function Home({ coffees }) {
 
       <Box m={4}></Box>
 
-      <Grid container spacing={MD ? 2 : 7}>
+      <Grid container spacing={MD ? 2 : (XS ? 1 : 7)}>
         {coffees.map(coffee => <CoffeeProductCard {...coffee} key={coffee.id} />)}
       </Grid>
     </Box>

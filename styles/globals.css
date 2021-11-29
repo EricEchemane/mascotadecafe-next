@@ -74,6 +74,9 @@ body {
   .md-center {
     text-align: center;
   }
+  .coffee-product-card:hover{
+    transform: scale(1);
+  }
 }
 
 .coffee-product-card{
