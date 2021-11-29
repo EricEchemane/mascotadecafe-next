@@ -20,7 +20,7 @@ export default function About() {
                             Get a 10% discount on your first visit.
                         </Typography>
                         <Typography>
-                            Join our growing community, it's free!
+                            Join our growing community, it&apos;s free!
                         </Typography>
                     </Box>
                     <Button variant='contained' sx={{ color: 'white', marginRight: '1rem' }}> sign up </Button>
