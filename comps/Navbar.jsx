@@ -82,13 +82,28 @@ export default function Navbar() {
                 <Box p={1} display='flex' gap='1rem' mr={2} id='nav-links'>
 
                     <Link href='/about' >
-                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> About </Button>
+                        <Button
+                            color={router.pathname == '/about' ? 'primary' : 'inherit'}
+                            sx={{ justifyContent: navBP ? 'flex-start' : 'center' }}
+                            fullWidth={navBP}>
+                            About
+                        </Button>
                     </Link>
                     <Link href='/pets'>
-                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> Pets </Button>
+                        <Button
+                            color={router.pathname == '/pets' ? 'primary' : 'inherit'}
+                            sx={{ justifyContent: navBP ? 'flex-start' : 'center' }}
+                            fullWidth={navBP}>
+                            Pets
+                        </Button>
                     </Link>
                     <Link href='/contact'>
-                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> Contact </Button>
+                        <Button
+                            color={router.pathname == '/contact' ? 'primary' : 'inherit'}
+                            sx={{ justifyContent: navBP ? 'flex-start' : 'center' }}
+                            fullWidth={navBP}>
+                            Contact
+                        </Button>
                     </Link>
 
                     <Box id="mob-theme-btns" sx={{ cursor: 'pointer' }}>
