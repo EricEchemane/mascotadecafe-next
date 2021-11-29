@@ -28,7 +28,7 @@ export default function Home({ coffees }) {
 
   return <>
     <Navbar />
-    <Box className="darken-bg" mb="2rem">
+    <Box className="darken-bg" mb="2rem" pt={8}>
 
       <Grid container className='cont' p="1.5rem">
 

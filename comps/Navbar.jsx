@@ -103,7 +103,7 @@ export default function Navbar() {
                 </Box>
 
                 <Link href='/cart'>
-                    <StyledBadge badgeContent={cartItems.length} color="primary">
+                    <StyledBadge badgeContent={cartItems.length} color="secondary">
                         <StyledIconButton aria-label="dark theme">
                             <ShoppingCartOutlinedIcon />
                         </StyledIconButton>

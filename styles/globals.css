@@ -55,6 +55,9 @@ body {
 
 #nav {
   padding: 0 calc((100vw - 1080px) / 2);
+  position: fixed;
+  backdrop-filter: blur(50px);
+  z-index: 5;
 }
 
 .rounded {

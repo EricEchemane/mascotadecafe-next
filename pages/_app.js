@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
     palette: {
       mode: theme,
       primary: {
-        main: orange[800],
+        main: orange[500],
       },
       secondary: {
         main: red[500],
