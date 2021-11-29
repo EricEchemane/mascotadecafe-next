@@ -46,11 +46,13 @@ export default function Home({ coffees }) {
             mb={4}>
             Experiences <br /> Together
           </Typography>
-          <Box className='md-center' marginBottom="1rem">
-            Photo {MD ? 'below' : 'on the right'}: <br />
-            Scene from Filinvest City Branch <br />
-            March 29, 2021 | Sunday | 2:00 PM
-          </Box>
+          <Typography variant='body2' className='md-center'>
+            <Box mb="1rem">
+              Photo {MD ? 'below' : 'on the right'}: <br />
+              Scene from Filinvest City Branch <br />
+              March 29, 2021 | Sunday | 2:00 PM
+            </Box>
+          </Typography>
         </Grid>
 
         <Grid item xs={12} md={7}>
