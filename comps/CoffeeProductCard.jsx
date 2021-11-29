@@ -34,6 +34,7 @@ export default function CoffeeProductCard({ id, name, desc, price, rating }) {
                     src={`/assets/coffeeProducts/${id}.png`}
                     width={100}
                     height={80}
+                    priority={true}
                     layout='responsive'
                 />
 

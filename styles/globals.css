@@ -74,9 +74,6 @@ body {
   .md-center {
     text-align: center;
   }
-  .coffee-product-card:hover{
-    transform: scale(1);
-  }
 }
 
 .coffee-product-card{
@@ -84,9 +81,12 @@ body {
   transition: 200ms ease;
   backdrop-filter: invert(5%);
 }
-.coffee-product-card:hover{
-  transform: scale(1.1);
-  z-index: 2;
-  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .5);
-  backdrop-filter: none;
+
+@media screen and (min-width: 800px)  {
+  .coffee-product-card:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .5);
+    backdrop-filter: none;
+  }
 }
