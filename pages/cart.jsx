@@ -26,12 +26,12 @@ export default function Cart() {
 
                     <Grid container pt={2} spacing={2}>
                         <Grid item xs={12} md={8} >
-                            {cartItems.map(item => <CartItemCard  {...item} />)}
+                            {cartItems.map(item => <CartItemCard  {...item} key={item.id} />)}
                         </Grid>
 
                         <Grid item xs={12} md={4}>
                             <Box className='darken-bg' p={2} >
-                                Checkout
+                                <Typography variant='h6'> Checkout </Typography>
                             </Box>
                         </Grid>
 
