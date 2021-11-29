@@ -25,7 +25,6 @@ export default function useShoppingCart() {
     useEffect(() => {
         persistCartItemsToStorage(cartItems);
         setTotalPrice(getTotalPrice(cartItems));
-        console.log(cartItems);
     }, [cartItems]);
 
     function isInTheCart(id) {
