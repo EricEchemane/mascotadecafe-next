@@ -8,10 +8,11 @@ import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Link from 'next/link';
 import CartItemCard from '../comps/CartItemCard';
+import CheckoutForm from '../comps/CheckoutForm';
 
 export default function Cart() {
 
-    const { cartItems, totalPrice } = useContext(ShoppingCartContext);
+    const { cartItems } = useContext(ShoppingCartContext);
 
     const XS = useMediaQuery('(max-width: 600px)');
 
@@ -29,12 +30,7 @@ export default function Cart() {
                             {cartItems.map(item => <CartItemCard  {...item} key={item.id} />)}
                         </Grid>
 
-                        <Grid item xs={12} md={4}>
-                            <Box className='darken-bg' p={2} >
-                                <Typography variant='h6'> Checkout </Typography>
-                            </Box>
-                        </Grid>
-
+                        <Grid item xs={12} md={4}> <CheckoutForm /> </Grid>
                     </Grid>
                 </Box>
                 :
