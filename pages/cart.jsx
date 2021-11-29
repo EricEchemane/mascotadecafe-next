@@ -36,21 +36,21 @@ export default function Cart() {
                         <Grid item xs={12} md={8} >
                             {
                                 cartItems.map(({ id, name, desc, price, quantity, imgSrc }) => (
-                                    <Box p={2} mb={2} key={id} className='darken-bg'>
+                                    <Box py={3} px={2} mb={2} key={id} className='darken-bg'>
                                         <Grid container spacing={2}>
-                                            <Grid item xs={12} sm={6}>
+                                            <Grid item xs={12} sm={7}>
                                                 <Box display='flex' alignItems='center' gap='1rem'>
                                                     <Avatar
                                                         alt={name}
                                                         src={imgSrc}
                                                         sx={{ width: '4rem', height: '4rem' }} />
                                                     <Box>
-                                                        <Typography> {name} </Typography>
+                                                        <Typography mb={1}> {name} </Typography>
                                                         <Typography variant='caption'> {desc} </Typography>
                                                     </Box>
                                                 </Box>
                                             </Grid>
-                                            <Grid item xs={12} sm={6}>
+                                            <Grid item xs={12} sm={5}>
                                                 <Box display='flex' alignItems='center' gap='1rem' height='100%'>
                                                     <Typography color='secondary' mt={1}> PHP {price} </Typography>
                                                     <Box flex='1 1 auto'></Box>
