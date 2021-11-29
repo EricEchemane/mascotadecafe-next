@@ -7,14 +7,24 @@ import isDevMode from '../lib/node_env';
 import Image from 'next/image';
 import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import CoffeeProductCard from '../comps/CoffeeProductCard';
+
+import { useRouter } from 'next/router';
 
 export default function Home({ coffees }) {
 
   const belowSmallDevices = useMediaQuery('(max-width: 950px)');
   const MD = useMediaQuery('(max-width: 800px)');
   const XS = useMediaQuery('(max-width: 600px)');
+
+  const router = useRouter();
+
+  function handleChange(event, route) {
+    if (route === '/') router.push('/', '/', { scroll: false });
+    else if (route === '/pastry') router.push('/pastry', '/pastry', { scroll: false });
+  };
 
   return <>
     <Navbar />
@@ -36,13 +46,13 @@ export default function Home({ coffees }) {
             mb={4}>
             Experiences <br /> Together
           </Typography>
-          <Typography variant='body2' className='md-center'>
-            <Box mb="1rem">
+          <Box mb="1rem">
+            <Typography variant='body2' className='md-center'>
               Photo {MD ? 'below' : 'on the right'}: <br />
               Scene from Filinvest City Branch <br />
               March 29, 2021 | Sunday | 2:00 PM
-            </Box>
-          </Typography>
+            </Typography>
+          </Box>
         </Grid>
 
         <Grid item xs={12} md={7}>
@@ -61,14 +71,15 @@ export default function Home({ coffees }) {
 
     <Box p={XS ? '.5rem' : '1.5rem'} className='cont'>
 
-      <ButtonGroup variant="outlined" aria-label="products">
-        <Link href='/' passHref>
-          <Button> Coffee </Button>
-        </Link>
-        <Link href='/pastries' passHref>
-          <Button> Pastries </Button>
-        </Link>
-      </ButtonGroup>
+      <ToggleButtonGroup
+        color="primary"
+        value={router.pathname}
+        exclusive
+        onChange={handleChange}
+      >
+        <ToggleButton value="/"> Coffee </ToggleButton>
+        <ToggleButton value="/pastry"> Pastry </ToggleButton>
+      </ToggleButtonGroup>
 
       <Box m={4}></Box>
 
