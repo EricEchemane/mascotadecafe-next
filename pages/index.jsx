@@ -3,8 +3,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Navbar from '../comps/Navbar';
-import { useContext } from 'react';
-import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import isDevMode from '../lib/node_env';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,14 +11,6 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import CoffeeProductCard from '../comps/CoffeeProductCard';
 
 export default function Home({ coffees }) {
-
-  const {
-    cartItems,
-    totalPrice,
-    setCartItems,
-    addToShoppingCart,
-    removeFromShoppingCart,
-    changeCartItemQuantity } = useContext(ShoppingCartContext);
 
   const belowSmallDevices = useMediaQuery('(max-width: 950px)');
   const MD = useMediaQuery('(max-width: 800px)');

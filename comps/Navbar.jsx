@@ -62,7 +62,7 @@ export default function Navbar() {
     ));
 
     return <>
-        <AppBar position="static" id='nav' color='transparent' sx={{ boxShadow: 'none' }}>
+        <AppBar position="static" id='nav' color='default' sx={{ boxShadow: 'none' }}>
             <Toolbar>
                 <Link href='/' passHref>
                     <Box display='flex' alignItems='center' sx={{ cursor: 'default' }}>
