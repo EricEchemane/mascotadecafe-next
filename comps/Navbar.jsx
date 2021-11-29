@@ -16,6 +16,7 @@ import { useRouter } from 'next/router';
 import { styled, experimental_sx as sx } from '@mui/material/styles';
 import { ShoppingCartContext } from '../context_hooks/ShoppingCartContext';
 import MenuOpenOutlinedIcon from '@mui/icons-material/MenuOpenOutlined';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Navbar() {
 
@@ -28,6 +29,8 @@ export default function Navbar() {
     const menuIsShown = useRef(false);
 
     const router = useRouter();
+
+    const navBP/* nav breakpoint */ = useMediaQuery('(max-width: 680px)');
 
     useEffect(() => {
         window.addEventListener('click', clickHandler);
@@ -78,14 +81,14 @@ export default function Navbar() {
 
                 <Box p={1} display='flex' gap='1rem' mr={2} id='nav-links'>
 
-                    <Link href='/about'>
-                        <Button sx={{ color: 'text.primary' }}> About </Button>
+                    <Link href='/about' >
+                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> About </Button>
                     </Link>
                     <Link href='/pets'>
-                        <Button sx={{ color: 'text.primary' }}> Pets </Button>
+                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> Pets </Button>
                     </Link>
                     <Link href='/contact'>
-                        <Button sx={{ color: 'text.primary' }}> Contact </Button>
+                        <Button sx={{ color: 'text.primary', justifyContent: navBP ? 'flex-start' : 'center' }} fullWidth={navBP}> Contact </Button>
                     </Link>
 
                     <Box id="mob-theme-btns" sx={{ cursor: 'pointer' }}>

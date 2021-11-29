@@ -105,5 +105,5 @@ a {
 }
 
 #landing-div {
-  background: linear-gradient(120deg, transparent, #fff3e0);
+  background: linear-gradient(120deg, transparent,transparent 25%, #fff3e0);
 }
