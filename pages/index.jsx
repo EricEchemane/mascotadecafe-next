@@ -22,8 +22,7 @@ export default function Home({ coffees }) {
   const router = useRouter();
 
   function handleChange(event, route) {
-    if (route === '/') router.push('/', '/', { scroll: false });
-    else if (route === '/pastry') router.push('/pastry', '/pastry', { scroll: false });
+    router.push(route, route, { scroll: false });
   };
 
   return <>

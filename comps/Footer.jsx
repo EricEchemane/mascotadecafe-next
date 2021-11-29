@@ -81,7 +81,7 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </Box>
-            <Box textAlign='center' p={1}>
+            <Box textAlign='center' py={1} px={4}>
                 <Typography variant='caption'>
                     2021 Copyright &copy; Mascota de Cafe Coffee Company. All Rights Reserved
                 </Typography>
