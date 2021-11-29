@@ -20,7 +20,7 @@ export default function Cart() {
 
     return <>
         <Navbar />
-        <Box p='1.5rem' mt={8} className='cont'>
+        <Box p='1.5rem' pt={10} className='cont'>
             <Typography variant='h5'> Cart Items </Typography>
             <Box mt={2}>
                 {
