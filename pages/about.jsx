@@ -4,7 +4,10 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export default function About() {
+import Bests from '../comps/Bests';
+import isDevMode from '../lib/node_env';
+
+export default function About({ bestProductsData }) {
     return <>
         <Navbar />
         <Box pt={12} pb={4} id='landing-div'>
@@ -16,10 +19,8 @@ export default function About() {
                     <Typography variant='h4' component='span'> and </Typography>
                     <Typography variant='h4' color='primary' component='span'> Energy </Typography>
                     <Box py={4}>
-                        <Typography>
-                            Get a 10% discount on your first visit.
-                        </Typography>
-                        <Typography>
+                        <Typography> Get a 10% discount on your first visit. </Typography>
+                        <Typography variant='caption' component='p'>
                             Join our growing community, it&apos;s free!
                         </Typography>
                     </Box>
@@ -37,5 +38,14 @@ export default function About() {
                 </Grid>
             </Grid>
         </Box>
+        <Bests data={bestProductsData} />
     </>;
+}
+
+export async function getStaticProps() {
+    const origin = isDevMode() ? 'http://localhost:3000' : 'https://mascotadecafe.vercel.app';
+    const res = await fetch(`${origin}/data/bests.json`);
+    return {
+        props: { bestProductsData: await res.json() }
+    };
 }

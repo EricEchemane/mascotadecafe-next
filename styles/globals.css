@@ -77,9 +77,17 @@ a {
     text-align: center;
   }
 }
+
+#landing-div {
+  background: linear-gradient(120deg, transparent 50%, #fff3e0 50%);
+}
+
 @media screen and (max-width: 800px) {
   .md-center {
     text-align: center;
+  }
+  #landing-div {
+    background: linear-gradient(120deg, transparent 75%, #fff3e0 25%);
   }
 }
 
@@ -102,8 +110,4 @@ a {
   width: 100%;
   border-radius: .5rem;
   box-shadow: 0 24px 24px -8px rgba(107, 71, 12, 0.5);
-}
-
-#landing-div {
-  background: linear-gradient(120deg, transparent,transparent 25%, #fff3e0);
 }
