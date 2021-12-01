@@ -68,7 +68,7 @@ export default function Home({ coffees }) {
       </Grid>
     </Box>
 
-    <Box p={XS ? '.5rem' : '1.5rem'} className='cont'>
+    <Box p={XS ? '.5rem' : '1.5rem'} className='cont' id='products'>
 
       <ToggleButtonGroup
         color="primary"

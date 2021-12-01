@@ -111,3 +111,15 @@ a {
   border-radius: .5rem;
   box-shadow: 0 24px 24px -8px rgba(107, 71, 12, 0.5);
 }
+
+#slider-images {
+  will-change: transform;
+  animation: slide 70s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-60%); }
+  100% { transform: translateX(0); }
+}
