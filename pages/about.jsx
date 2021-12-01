@@ -45,7 +45,8 @@ export default function About({ bestProductsData }) {
 export async function getStaticProps() {
     const origin = isDevMode() ? 'http://localhost:3000' : 'https://mascotadecafe.vercel.app';
     const res = await fetch(`${origin}/data/bests.json`);
+    const data = await res.json();
     return {
-        props: { bestProductsData: await res.json() }
+        props: { bestProductsData: data }
     };
 }
