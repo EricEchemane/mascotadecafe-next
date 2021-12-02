@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 
 import Bests from '../comps/Bests';
 import Features from '../comps/Features';
+import Footer from '../comps/Footer';
+
 import isDevMode from '../lib/node_env';
 
 export default function About({ bestProductsData, features }) {
@@ -41,6 +43,7 @@ export default function About({ bestProductsData, features }) {
         </Box>
         <Bests data={bestProductsData} />
         <Features features={features} />
+        <Footer />
     </>;
 }
 
