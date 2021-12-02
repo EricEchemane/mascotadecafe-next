@@ -31,7 +31,12 @@ export default function Bests({ data }) {
                             <Paper
                                 elevation={8}
                                 key={src}
-                                sx={{ borderRadius: '.3rem', overflow: 'hidden' }}>
+                                sx={{
+                                    borderRadius: '.3rem',
+                                    overflow: 'hidden',
+                                    boxShadow: '0 24px 48px -12px rgba(0,0,0,.3)',
+                                    mb: '2rem'
+                                }}>
 
                                 <Box display='flex' flexDirection='column'>
                                     <Box>
