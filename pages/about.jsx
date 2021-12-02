@@ -19,7 +19,7 @@ export default function About({ bestProductsData }) {
                     <Typography variant='h4' component='span'> and </Typography>
                     <Typography variant='h4' color='primary' component='span'> Energy </Typography>
                     <Box py={4}>
-                        <Typography> Get a 10% discount on your first visit. </Typography>
+                        <Typography variant='caption'> Get a 10% discount on your first visit. </Typography>
                         <Typography variant='caption' component='p'>
                             Join our growing community, it&apos;s free!
                         </Typography>
