@@ -44,10 +44,10 @@ export default function Bests({ data }) {
                                             priority={true}
                                         />
                                     </Box>
-                                    <Typography sx={{ fontWeight: '600' }} pt={3} pl={2}> {name} </Typography>
+                                    <Typography sx={{ fontWeight: '500' }} pt={3} pl={2}> {name} </Typography>
                                     <Box p={2} display='flex' alignItems='center'>
-                                        <FavoriteIcon fontSize='small' color='primary' />
-                                        <Typography color='primary' ml={1} variant='caption'> {likes} people like this </Typography>
+                                        <FavoriteIcon fontSize='small' color='secondary' />
+                                        <Typography color='secondary' ml={1} variant='subtitle1'> {likes} people like this </Typography>
                                     </Box>
 
                                 </Box>

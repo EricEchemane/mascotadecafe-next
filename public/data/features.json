@@ -5,11 +5,6 @@
         "videoSrc": "/assets/videos/features/quality_ingredients.mp4"
     },
     {
-        "title": "Precise Process",
-        "desc": "Focused on the beans' true flavor. Cherry pulped from the coffee through machine and removes the outer layer of the skin",
-        "videoSrc": "/assets/videos/features/precise_process.mp4"
-    },
-    {
         "title": "Excellent Service",
         "desc": "Every member of our team has passed a customer service examination. We are confident in our ability to provide you with unwavering service and are delighted to provide you with our goods",
         "videoSrc": "/assets/videos/features/good_service.mp4"
@@ -28,5 +23,10 @@
         "title": "You can Adopt a Pet",
         "desc": "Yes, you can adopt a pet with our loyalty card. Loyalty cards have ten slots for Mascota stamps. One stamp if you reach five hundred pesos in a single bill. Fill in the loyalty card and you can adopt a pet for free, you just have to sign the pet adoption contract for you to be the official owner of the pet",
         "videoSrc": "/assets/videos/features/adopt_pet.mp4"
+    },
+    {
+        "title": "Precise Process",
+        "desc": "Focused on the beans' true flavor. Cherry pulped from the coffee through machine and removes the outer layer of the skin",
+        "videoSrc": "/assets/videos/features/precise_process.mp4"
     }
 ]

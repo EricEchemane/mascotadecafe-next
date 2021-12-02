@@ -5,9 +5,10 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import Bests from '../comps/Bests';
+import Features from '../comps/Features';
 import isDevMode from '../lib/node_env';
 
-export default function About({ bestProductsData }) {
+export default function About({ bestProductsData, features }) {
     return <>
         <Navbar />
         <Box pt={12} pb={4} id='landing-div'>
@@ -39,14 +40,22 @@ export default function About({ bestProductsData }) {
             </Grid>
         </Box>
         <Bests data={bestProductsData} />
+        <Features features={features} />
     </>;
 }
 
 export async function getStaticProps() {
     const origin = isDevMode() ? 'http://localhost:3000' : 'https://mascotadecafe.vercel.app';
-    const res = await fetch(`${origin}/data/bests.json`);
-    const data = await res.json();
+
+    const bestProductsRes = await fetch(`${origin}/data/bests.json`);
+    const featuresRes = await fetch(`${origin}/data/features.json`);
+
+    const bestProducts = await bestProductsRes.json();
+    const features = await featuresRes.json();
     return {
-        props: { bestProductsData: data }
+        props: {
+            bestProductsData: bestProducts,
+            features: features
+        }
     };
 }

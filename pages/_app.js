@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head';
 import useThemeContext from '../context_hooks/ThemeContext';
-import { orange, red } from '@mui/material/colors';
+import { blue, orange, red } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 import useShoppingCart from '../context_hooks/ShoppingCartContext';
 
@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }) {
       mode: theme,
       primary: {
         main: orange[500],
+        link: blue[500],
       },
       secondary: {
         main: red[500],
