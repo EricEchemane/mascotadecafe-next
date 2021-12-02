@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Quality Ingredients",
+        "desc": "Strong taste of coffee and food served everyday. Enhanced based on their freshness and the natural nature that the best ones bring to the table",
+        "videoSrc": "/assets/videos/features/quality_ingredients.mp4"
+    },
+    {
+        "title": "Precise Process",
+        "desc": "Focused on the beans' true flavor. Cherry pulped from the coffee through machine and removes the outer layer of the skin",
+        "videoSrc": "/assets/videos/features/precise_process.mp4"
+    },
+    {
+        "title": "Excellent Service",
+        "desc": "Every member of our team has passed a customer service examination. We are confident in our ability to provide you with unwavering service and are delighted to provide you with our goods",
+        "videoSrc": "/assets/videos/features/good_service.mp4"
+    },
+    {
+        "title": "Pets in House",
+        "desc": "Play with our joyful and loving pets while having coffee. We have a pet's area to the right and left near the entrance to maintain cleanliness. The pets are neighborhood pets ensured that they are clean and well-trained",
+        "videoSrc": "/assets/videos/features/pets_in_house.mp4"
+    },
+    {
+        "title": "Good Ambience",
+        "desc": "Our cafe was designed with the help of professionals, and all of the furniture is focused on our preferences for where customers would feel most at ease. It is important to us that our customers feel at ease so that they can focus on their jobs or studies. We want them to be in the best possible shape",
+        "videoSrc": "/assets/videos/features/good_ambience.mp4"
+    },
+    {
+        "title": "You can Adopt a Pet",
+        "desc": "Yes, you can adopt a pet with our loyalty card. Loyalty cards have ten slots for Mascota stamps. One stamp if you reach five hundred pesos in a single bill. Fill in the loyalty card and you can adopt a pet for free, you just have to sign the pet adoption contract for you to be the official owner of the pet",
+        "videoSrc": "/assets/videos/features/adopt_pet.mp4"
+    }
+]
