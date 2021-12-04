@@ -14,7 +14,7 @@ export default function Footer() {
                             <Typography mb={2}> Mascota de Cafe </Typography>
                             <Box display='flex' flexDirection='column' gap='.5rem'>
                                 <Typography variant='caption'>
-                                    <Link href='/owners'> The Owners </Link>
+                                    <Link href='/about#founders'> The Founders </Link>
                                 </Typography>
                                 <Typography variant='caption'>
                                     <Link href='/contact'> Contact </Link>

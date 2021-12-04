@@ -37,7 +37,7 @@ export default function Contact() {
                             <Box display='grid' gap='1rem'>
                                 <TextField id="message-email" fullWidth label="Email" variant="standard" />
                                 <TextField id="message" fullWidth label="Message" variant="standard" />
-                                <Button variant='contained' fullWidth sx={{ color: 'white', mt: 2 }}> Send </Button>
+                                <Button variant='contained' fullWidth sx={{ color: 'white', mt: 4 }}> Send </Button>
                             </Box>
                         </Paper>
                     </Grid>

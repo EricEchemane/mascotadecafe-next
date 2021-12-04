@@ -8,12 +8,13 @@ import Bests from '../comps/Bests';
 import Features from '../comps/Features';
 import Stories from '../comps/Stories';
 import Footer from '../comps/Footer';
+import TheOwners from '../comps/TheOwners';
 
 import isDevMode from '../lib/node_env';
 
 import Head from 'next/head';
 
-export default function About({ bestProductsData, features, stories }) {
+export default function About({ bestProductsData, features, stories, founders }) {
 
     return <>
         <Head>
@@ -53,6 +54,7 @@ export default function About({ bestProductsData, features, stories }) {
         <Bests data={bestProductsData} />
         <Features features={features} />
         <Stories stories={stories} />
+        <TheOwners founders={founders} />
         <Footer />
     </>;
 }
@@ -63,16 +65,19 @@ export async function getStaticProps() {
     const bestProductsRes = await fetch(`${origin}/data/bests.json`);
     const featuresRes = await fetch(`${origin}/data/features.json`);
     const storiesRes = await fetch(`${origin}/data/stories.json`);
+    const foundersRes = await fetch(`${origin}/data/founders.json`);
 
     const bestProducts = await bestProductsRes.json();
     const features = await featuresRes.json();
     const stories = await storiesRes.json();
+    const founders = await foundersRes.json();
 
     return {
         props: {
             bestProductsData: bestProducts,
             features: features,
-            stories: stories
+            stories: stories,
+            founders: founders
         }
     };
 }
