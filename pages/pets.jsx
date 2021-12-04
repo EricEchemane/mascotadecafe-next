@@ -8,6 +8,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Navbar from '../comps/Navbar';
+import PetCard from '../comps/PetCard';
+import Footer from '../comps/Footer';
 import isDevMode from '../lib/node_env';
 
 export default function Pets({ pets }) {
@@ -16,10 +18,11 @@ export default function Pets({ pets }) {
 
     return <>
         <Head>
-            <title> Pets | Mascota de Cafe </title>
+            <title> Pets - Mascota de Cafe </title>
             <meta name='description' content='Meet new Friends and play with them.' />
         </Head>
         <Navbar />
+
         <Box pt={12} className='darken-bg'>
             <Grid container className='cont' px='1.5rem'>
 
@@ -48,6 +51,18 @@ export default function Pets({ pets }) {
                 </Grid>
             </Grid>
         </Box>
+
+        <Box className='cont' p='1.5rem' pt={8}>
+            <Typography variant='h6' mb={4}> Visit us and let&apos;s play! </Typography>
+
+            <Grid container spacing={8}>
+                {pets.map(pet => (
+                    <PetCard {...pet} key={pet.name} />
+                ))}
+            </Grid>
+        </Box>
+
+        <Footer />
     </>;
 }
 
