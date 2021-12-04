@@ -10,7 +10,8 @@ import Footer from '../comps/Footer';
 
 import isDevMode from '../lib/node_env';
 
-export default function About({ bestProductsData, features }) {
+export default function About({ bestProductsData, features, stories }) {
+
     return <>
         <Navbar />
         <Box pt={12} pb={4} id='landing-div'>
@@ -52,13 +53,17 @@ export async function getStaticProps() {
 
     const bestProductsRes = await fetch(`${origin}/data/bests.json`);
     const featuresRes = await fetch(`${origin}/data/features.json`);
+    const storiesRes = await fetch(`${origin}/data/stories.json`);
 
     const bestProducts = await bestProductsRes.json();
     const features = await featuresRes.json();
+    const stories = await storiesRes.json();
+
     return {
         props: {
             bestProductsData: bestProducts,
-            features: features
+            features: features,
+            stories: stories
         }
     };
 }
