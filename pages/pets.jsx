@@ -21,6 +21,7 @@ export default function Pets({ pets }) {
             <title> Pets - Mascota de Cafe </title>
             <meta name='description' content='Meet new Friends and play with them.' />
         </Head>
+
         <Navbar />
 
         <Box pt={12} className='darken-bg'>
