@@ -71,7 +71,7 @@ export default function Navbar() {
         <AppBar position="static" id='nav' color='default' sx={{ boxShadow: 'none' }}>
             <Toolbar>
                 <Link href='/' passHref>
-                    <Box display='flex' alignItems='center' sx={{ cursor: 'default' }}>
+                    <Box display='flex' alignItems='center' sx={{ cursor: 'pointer' }}>
                         <Avatar src='/favicon.png' alt='mascota de cafe logo' />
                         <Typography variant="h6" component="h1" ml={1}> Mascota de Cafe </Typography>
                     </Box>
