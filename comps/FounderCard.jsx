@@ -23,10 +23,10 @@ export default function FounderCard({ index, id, fullname, position, about, inst
                         layout='responsive'
                     />
                 </Grid>
-                <Grid item xs={12} md={7} order={index % 2 == 0 && !MD ? 1 : 0} px={4} py={3}>
+                <Grid item xs={12} md={7} order={index % 2 == 0 && !MD ? 1 : 0} p={3}>
                     <Typography variant='h5'> <strong> {fullname} </strong> </Typography>
                     <Typography variant='subtitle2' mb={2}> {position} </Typography>
-                    <Typography variant={MD ? 'body1' : 'caption'} > {about} </Typography>
+                    <Typography variant='caption' > {about} </Typography>
                     <Typography variant='caption' mt={4} component='div' color='primary.link'>
                         <a target="_blank" rel='author noreferrer' href={instagramAcc} style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}> <InstagramIcon /> {instaName} </a>
                     </Typography>

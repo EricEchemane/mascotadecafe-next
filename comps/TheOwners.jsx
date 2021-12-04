@@ -11,8 +11,8 @@ export default function TheOwners({ founders }) {
         <Box pb={4} pt={12} id='founders'>
             <Box textAlign='center'>
                 <Typography variant='h4' color='primary' mb={4}> The Founders </Typography>
-                <Typography> <i> "Poeple do not buy goods and services. </i> </Typography>
-                <Typography> <i> They buy Relations, Stories and Magic." </i> </Typography>
+                <Typography variant='caption' component='div' px={2}> <i> "Poeple do not buy goods and services. </i> </Typography>
+                <Typography variant='caption' component='div' px={2}> <i> They buy Relations, Stories and Magic." </i> </Typography>
 
                 <Box my={4}>
                     <Box sx={{ maxWidth: '800px', margin: 'auto' }}>
@@ -27,9 +27,9 @@ export default function TheOwners({ founders }) {
                 </Box>
 
                 <Typography variant='h5' color='secondary' mb={4}> <strong> Who are we? </strong> </Typography>
-                <Typography> " During college, we met each other. </Typography>
-                <Typography> With common interests, we enjoy being together. </Typography>
-                <Typography> Regardless of our differences we had founded this coffee company. </Typography>
+                <Typography variant='caption' component='div' px={2}> " During college, we met each other. </Typography>
+                <Typography variant='caption' component='div' px={2}> With common interests, we enjoy being together. </Typography>
+                <Typography variant='caption' component='div' px={2}> Regardless of our differences we had founded this coffee company. </Typography>
             </Box>
 
             <Box mt={8} p={2}>
