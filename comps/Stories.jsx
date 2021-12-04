@@ -9,10 +9,10 @@ import Image from 'next/image';
 export default function Stories({ stories }) {
     return <>
         <Box className='cont' px='1.5rem' pt={10} pb={4}>
-            <Typography color='primary' variant='h4' textAlign='center'> Stories </Typography>
+            <Typography color='primary' variant='h4' mb={6} textAlign='center'> Stories </Typography>
             {stories.map(({ id, name, title, branch, instagram, story, photoBy }) => (
 
-                <Box key={id} my={8} sx={{ maxWidth: '800px' }} mx='auto'>
+                <Box key={id} mb={8} sx={{ maxWidth: '800px' }} mx='auto'>
                     <Paper>
                         <Grid container>
 

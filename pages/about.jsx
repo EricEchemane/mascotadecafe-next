@@ -11,9 +11,16 @@ import Footer from '../comps/Footer';
 
 import isDevMode from '../lib/node_env';
 
+import Head from 'next/head';
+
 export default function About({ bestProductsData, features, stories }) {
 
     return <>
+        <Head>
+            <title> About Mascota de Cafe </title>
+            <meta name='description' content='Coffee and Pets will bring you Love and Energy' />
+        </Head>
+
         <Navbar />
         <Box pt={12} pb={4} id='landing-div'>
             <Grid container className='cont' px='1.5rem'>
