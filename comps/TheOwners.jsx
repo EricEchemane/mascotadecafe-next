@@ -29,7 +29,7 @@ export default function TheOwners({ founders }) {
                 <Typography variant='h5' color='secondary' mb={4}> <strong> Who are we? </strong> </Typography>
                 <Typography variant='caption' component='div' px={2}> " During college, we met each other. </Typography>
                 <Typography variant='caption' component='div' px={2}> With common interests, we enjoy being together. </Typography>
-                <Typography variant='caption' component='div' px={2}> Regardless of our differences we had founded this coffee company. </Typography>
+                <Typography variant='caption' component='div' px={2}> Regardless of our differences we had founded this coffee company. " </Typography>
             </Box>
 
             <Box mt={8} p={2}>
