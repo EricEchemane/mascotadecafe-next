@@ -1,0 +1,72 @@
+[
+    {
+        "sex": "He",
+        "name": "Hemmings",
+        "type": "cat",
+        "breed": "Aspin",
+        "about": "Hemming was took from public market"
+    },
+    {
+        "sex": "He",
+        "name": "Toyama",
+        "type": "dog",
+        "breed": "Aspin",
+        "about": "Toyama was took from Bayanan Streets."
+    },
+    {
+        "sex": "He",
+        "name": "Prince",
+        "type": "Dog",
+        "breed": "Puspin",
+        "about": "Prince was took from public market"
+    },
+    {
+        "sex": "She",
+        "name": "Jade",
+        "type": "cat",
+        "breed": "Aspin",
+        "about": "Jade was took from underpass"
+    },
+    {
+        "sex": "He",
+        "name": "Glister",
+        "type": "dog",
+        "breed": "Puspin",
+        "about": "Glister was took from public market"
+    },
+    {
+        "sex": "She",
+        "name": "Matt",
+        "type": "dog",
+        "breed": "Aspin",
+        "about": "Matt was took from Illaya Streets."
+    },
+    {
+        "sex": "She",
+        "name": "Shana",
+        "type": "dog",
+        "breed": "Aspin",
+        "about": "Shana was took from footbridge"
+    },
+    {
+        "sex": "He",
+        "name": "Oreo",
+        "type": "Dog",
+        "breed": "Husky",
+        "about": "Oreo was took from bus terminal."
+    },
+    {
+        "sex": "She",
+        "name": "Mallow",
+        "type": "cat",
+        "breed": "Puspin",
+        "about": "Mallow was took from near the mall"
+    },
+    {
+        "sex": "He",
+        "name": "Milo",
+        "type": "cat",
+        "breed": "Van cat",
+        "about": "Milo was took from public market."
+    }
+]
