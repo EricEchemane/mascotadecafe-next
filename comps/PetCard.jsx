@@ -15,6 +15,7 @@ export default function PetCard({ sex, name, type, breed, about }) {
                     width={100}
                     height={100}
                     layout='responsive'
+                    priority={true}
                 />
                 <Box p={2}>
                     <Typography variant='h6' mb={2}> {name} </Typography>
